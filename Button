@@ -1,0 +1,39 @@
+
+/**
+ * Button For Case Class
+ *
+ * @Jack Thompson
+ * @5/19
+ */
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class MyFrame extends JFrame implements ActionListener 
+{
+    JButton button;
+    MyFrame()
+    {
+        button = new JButton();
+        button.setBounds(100,100,250,100);
+        button.addActionListener(this);
+        button.setText("OPEN CASE");
+        button.setFocusable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        this.setLayout(null);
+        this.setSize(500,500);
+        this.setVisible(true);
+        this.add(button);
+    }      
+    
+    public void actionPerformed(ActionEvent e)
+    {
+        Case CS = new Case();
+        if(e.getSource()==button)
+        {
+            System.out.println(CS.Win());
+        }
+    }
+}
