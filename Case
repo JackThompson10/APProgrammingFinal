@@ -1,0 +1,198 @@
+
+/**
+ * Main Case Class
+ *
+ * @Jack Thompson
+ * @5/19
+ */
+
+public class Case
+{
+    public static void main(String [] args)
+    {
+        new MyFrame();
+        System.out.println("Welcome to the Gamma Case Simulator");
+        
+        /*
+        for (int i = 100; i > 0; i--)
+        {
+            System.out.println("You won a: " + Rarity()+ " in " + wear());
+        }
+        */
+    }
+    
+    public String Win()
+    {
+        return ("You won a: " + Rarity()+ " in " + wear());
+    }
+    
+    public static String Rarity()
+    {
+        int r = (int)(Math.random()*100);
+        if(r >= 0 && r <= 75)
+        {
+            int temp = (int)(Math.random()*7);
+            if(temp == 0)
+            {
+                return "PP-Bizon | Harvester";
+            }
+            if(temp == 1)
+            {
+                return "SG 553 | Aerial";
+            }
+            if(temp == 2)
+            {
+                return "Nova | Exo";
+            }
+            if(temp == 3)
+            {
+                return "MAC-10 | Carnivore";
+            }
+            if(temp == 4)
+            {
+                return "P250 | Iron Clad";
+            }
+            if(temp == 5)
+            {
+                return "Tec-9 | Ice Cap";
+            }
+            if(temp == 6)
+            {
+                return "Five-SeveN | Violent Daimyo";
+            }
+        }
+        if(r >= 76 && r <= 90)
+        {
+            int temp = (int)(Math.random()*5);
+            if(temp == 0)
+            {
+                return "Sawed-Off | Limelight";
+            }
+            if(temp == 1)
+            {
+                return "AUG | Aristocrat";
+            }
+            if(temp == 2)
+            {
+                return "P90 | Chopper";
+            }
+            if(temp == 3)
+            {
+                return "AWP | Phobos";
+            }
+            if(temp == 4)
+            {
+                return "R8 Revolver | Reboot";
+            }
+        }
+        if(r >= 91 && r <= 95)
+        {
+            int temp = (int)(Math.random()*3); 
+            if(temp == 0)
+            {
+                return "SCAR-20 | Bloodsport";
+            }
+            if(temp == 1)
+            {
+                return "P2000 | Imperial Dragon";
+            }
+            if(temp == 2)
+            {
+                return "M4A4 | Desolate Space";
+            }
+        }
+        if(r >= 96 && r <= 98)
+        {
+            int temp = (int)(Math.random()*2);
+            if(temp == 0)
+            {
+                return "Glock-18 | Wasteland Rebel";
+            }
+            if(temp == 1)
+            {
+                return "M4A1-S | Mecha Industries";
+            }
+        }
+        if(r >= 99)
+        {
+            int temp = (int)(Math.random()*9);
+            if(temp == 0)
+            {
+                return "Bayonet | Gamma Doppler";
+            }
+            if(temp == 1)
+            {
+                return "Bayonet | Black Laminate";
+            }
+            if(temp == 2)
+            {
+                return "Flip Knife | Bright Water";
+            }
+            if(temp == 3)
+            {
+                return "Gut Knife | Bright Water";
+            }
+            if(temp == 4)
+            {
+                return "Karambit | Lore";
+            }
+            if(temp == 5)
+            {
+                return "M9 Bayonet | Gamma Doppler";
+            }
+            if(temp == 6)
+            {
+                return "M9 Bayonet | Freehand";
+            }
+            if(temp == 7)
+            {
+                return "Karambit | Autotronic";
+            }
+            if(temp == 8)
+            {
+                return "Gut Knife | Autotronic";
+            }
+            else
+            {
+                return "error1";
+            }
+        }
+        else
+        {
+            return "error2";
+        }
+        
+    }
+    
+    
+    public static String wear()
+    {
+        double f = Math.random();
+        if(f <= 0.07)
+        {
+            return "Factory New with a float of: " + f;
+        }
+        if(f > 0.07 && f <= 0.15)
+        {
+            return "Minimal Wear with a float of: " + f;
+        }
+        if(f > 0.15 && f <= 0.37)
+        {
+            return "Field-Tested with a float of: " + f;
+        }
+        if(f > 0.37 && f <= 0.44)
+        {
+            return "Well-Worn with a float of: " + f;
+        }
+        if(f > 0.44)
+        {
+            return "Battle-Scared with a float of: " + f;
+        }
+        else
+        {
+            return "error3";
+        }
+        
+    }
+    
+}
